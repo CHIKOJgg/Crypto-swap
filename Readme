@@ -1,0 +1,22 @@
+Crypto Swap
+Crypto Swap is a decentralized application (dApp) that allows users to exchange different cryptocurrencies without intermediaries. It is built on the Ethereum blockchain and uses smart contracts to execute swaps securely and efficiently.
+
+Features
+Supports ERC-20 tokens such as DAI, USDC, UNI, etc.
+Allows users to swap tokens at the best available rate across multiple liquidity pools
+Charges minimal fees for each swap transaction
+Provides a user-friendly interface with real-time price updates and swap history
+Integrates with popular wallets such as MetaMask, Coinbase Wallet, etc.Crypto Swap
+Crypto Swap is a decentralized application (dApp) that allows users to exchange different cryptocurrencies without intermediaries. It is built on the Ethereum blockchain and uses smart contracts to execute swaps securely and efficiently.
+
+How it works
+Crypto Swap uses a smart contract called Swap.sol that implements the logic for swapping tokens. The contract has a function called swapTokens that takes the following parameters:
+
+address _fromToken: The address of the token to be swapped from
+address _toToken: The address of the token to be swapped to
+uint256 _amount: The amount of tokens to be swapped
+uint256 _minReturn: The minimum amount of tokens to be received after the swap
+address[] _path: The path of tokens to be used for the swap
+The function first checks if the user has enough balance and allowance for the _fromToken. Then, it iterates over the _path array and performs a series of token transfers using the Uniswap V2 Router contract. The function also calculates the amount of tokens received after each transfer and ensures that it is greater than or equal to the _minReturn. Finally, it emits an event called Swap that contains the details of the swap.
+
+The web interface uses a JavaScript library called web3.js to interact with the Ethereum blockchain and the smart contract. It also uses a library called @uniswap/sdk to fetch the current prices and rates of different tokens from various liquidity pools. The interface allows users to select the tokens they want to swap, enter the amount, and confirm the transaction. It also displays the estimated return, fees, and slippage for each swap. Additionally, it shows the swap history and the current balance of each token for the user.
